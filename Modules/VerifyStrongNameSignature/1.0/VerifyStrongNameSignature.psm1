@@ -1,6 +1,15 @@
 ﻿
 function Test-StrongName {
 
+<#
+.SYNOPSIS
+    Проверка наличия строгого имени у сборки .NET
+.DESCRIPTION
+    Выполняет проверку подписи сборки с помощью утилиты sn.exe.
+.PARAMETER path
+    Путь к файлу сборки .NET.
+#>
+
     [CmdletBinding()]
     param(
         [Parameter(ValueFromPipeline=$true, Mandatory=$true)][string]$path
